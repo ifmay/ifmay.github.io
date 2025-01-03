@@ -389,10 +389,10 @@ ul#nav li.current a { color: #fdb0c0; }
   height: 4.8rem;
   width: 4.8rem;
   line-height: 4.8rem;
-  background: #313131;
+  background: #2A5470;
   border-radius: 50%;
   text-align: center;
-  color: #000;
+  color: #fff;
   position: absolute;
   left: 35%;
   top: .9rem;
