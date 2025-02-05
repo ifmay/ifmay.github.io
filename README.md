@@ -2,6 +2,7 @@
 
 
 Edited by Isabelle May
+
 Merged CEEVEE with KARDS from Styleshouts :) 
 
 For any questions on starting a personal website for resume, please contact imay2@zagmail.gonzaga.edu. 
