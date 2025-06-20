@@ -1,7 +1,6 @@
 # Personal Website Resume
-
-
-Edited by Isabelle May
+Created by: Isabelle May
+Access Here: https://ifmay.github.io/
 
 Merged CEEVEE with KARDS from Styleshouts :) 
 
@@ -17,9 +16,6 @@ Fonts:
 Icons:
  - Teenyicons (https://teenyicons.com/)
  - FontAwesome (https://fontawesome.com/)
-
-Stock Photos and Graphics:
- - Unsplash.com (https://unsplash.com/)
 
 Javascript Files:
  - JQuery (http://jquery.com/)
