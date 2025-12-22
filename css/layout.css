@@ -23,6 +23,10 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
+html {
+   scroll-behavior: smooth;
+}
+
 body { background: #7d7d7d; }
 
 .grey-section {
@@ -132,8 +136,15 @@ header .social li {
   margin: 0 10px;
   padding: 0;
 }
-header .social li a { color: #fff; }
-header .social li a:hover { color: #687864; }
+header .social li a { 
+  color: #fff;
+  transition: all 0.3s ease;
+}
+header .social li a:hover { 
+  color: #fdb0c0;
+  transform: scale(1.2);
+  display: inline-block;
+}
 
 /* scrolldown link */
 header .scrolldown a {
@@ -154,8 +165,25 @@ header .scrolldown a {
    -moz-transition: all .3s ease-in-out;
    -o-transition: all .3s ease-in-out;
    transition: all .3s ease-in-out;
+   
+   animation: bounce 2s infinite;
 }
-header .scrolldown a:hover { color: #687864; }
+header .scrolldown a:hover { 
+  color: #fdb0c0;
+  animation: none;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
 
 /* primary navigation
 --------------------------------------------------------------------- */
@@ -209,12 +237,34 @@ ul#nav li a {
 	text-decoration: none;
    text-align: left;
    color: #fff;
+   position: relative;
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
 	-o-transition: color .2s ease-in-out;
 	-ms-transition: color .2s ease-in-out;
 	transition: color .2s ease-in-out;
+}
+
+ul#nav li a::after {
+   content: '';
+   position: absolute;
+   width: 0;
+   height: 2px;
+   bottom: 5px;
+   left: 50%;
+   background-color: #fdb0c0;
+   transition: all 0.3s ease;
+   transform: translateX(-50%);
+}
+
+ul#nav li a:hover::after,
+ul#nav li.current a::after {
+   width: 80%;
+}
+
+ul#nav li a:hover {
+   color: #fdb0c0;
 }
 
 ul#nav li a:active { background-color: transparent !important; }
@@ -336,11 +386,17 @@ ul#nav li.current a { color: #fdb0c0; }
 
   /* Optional: Fixed button width */
   min-width: 160px; /* Ensures consistent button size */
+  
+  /* Enhanced transitions */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .button-section .button:hover {
   background-color: #fdb0c0;
   border-color: #fdb0c0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .button-section [class*="col-"] .button:first-child {
@@ -1048,6 +1104,12 @@ ul#nav li.current a { color: #fdb0c0; }
 #stats .stat {
   border-left: 1px solid rgba(255, 255, 255, 0.12);
   min-height: 17.4rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: default;
+}
+#stats .stat:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 #stats .stat:first-child {
   border: none;
@@ -1055,6 +1117,10 @@ ul#nav li.current a { color: #fdb0c0; }
 #stats .icon-part i {
   font-size: 4.8rem;
   color: #fff;
+  transition: transform 0.3s ease;
+}
+#stats .stat:hover .icon-part i {
+  transform: scale(1.1);
 }
 #stats .stat-count {
   color: #Fdb0c0 ;
@@ -1145,8 +1211,16 @@ ul#nav li.current a { color: #fdb0c0; }
 }
 #contact .section-head { margin-bottom: 42px; }
 
-#contact a, #contact a:visited  { color: #fdb0c0; }
-#contact a:hover, #contact a:focus { color: #fff; }
+#contact a, #contact a:visited  { 
+  color: #fdb0c0;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+#contact a:hover, #contact a:focus { 
+  color: #fff;
+  transform: translateX(5px);
+}
 
 #contact h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
@@ -1359,6 +1433,11 @@ footer .social-links li:first-child { margin-left: 0; }
    text-transform: uppercase;
    z-index: 100;
    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+   opacity: 1;
+   -webkit-transition: opacity 0.3s ease-in-out;
+   -moz-transition: opacity 0.3s ease-in-out;
+   -o-transition: opacity 0.3s ease-in-out;
+   transition: opacity 0.3s ease-in-out;
 }
 
 .project-badge.honors {
@@ -1367,6 +1446,10 @@ footer .social-links li:first-child { margin-left: 0; }
 
 .project-badge.internship {
    background: #CC5200;
+}
+
+.portfolio-item:hover .project-badge {
+   opacity: 0;
 }
 
 .item-wrap {
