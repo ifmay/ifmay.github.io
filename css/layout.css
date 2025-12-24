@@ -1854,12 +1854,6 @@ input[type="button"]:focus,
   color: #2A5470;
 }
 
-/* Individual list item hover within a hovered timeline block */
-#resume .timeline-block:hover .timeline-content ul li:hover {
-  transform: translateX(10px);
-  font-weight: 600;
-}
-
 /* ------------------------------------------------------------------ */
 /* PORTFOLIO SECTION ANIMATIONS
 /* ------------------------------------------------------------------ */
@@ -1941,24 +1935,6 @@ input[type="button"]:focus,
 .activity:nth-child(3) { --activity-index: 2; }
 .activity:nth-child(4) { --activity-index: 3; }
 .activity:nth-child(5) { --activity-index: 4; }
-
-.activity:hover {
-  transform: translateX(10px);
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
-  border-radius: 10px;
-  border-left: 3px solid #fdb0c0;
-}
-
-#activities h3 {
-  transition: all 0.3s ease;
-}
-
-#activities h3:hover {
-  color: #fff;
-  transform: scale(1.05);
-  text-shadow: 0 0 20px rgba(253, 176, 192, 0.6);
-}
 
 /* ------------------------------------------------------------------ */
 /* STATS SECTION - IMPRESSIVE COUNTER ANIMATIONS!
