@@ -100,22 +100,20 @@
 /*	Modal Popup
 ------------------------------------------------------*/
 
-$('.portfolio-item .item-wrap a').magnificPopup({
-   type: 'inline',
-   fixedContentPos: false,
-   fixedBgPos: true,
-   overflowY: 'auto',
-   closeBtnInside: true,
-   preloader: false,
-   midClick: true,
-   removalDelay: 300,
-   mainClass: 'mfp-fade'
-});
+    $('.item-wrap a').magnificPopup({
 
-$(document).on('click', '.popup-modal-dismiss', function (e) {
-   e.preventDefault();
-   $.magnificPopup.close();
-});
+       type:'inline',
+       fixedContentPos: false,
+       removalDelay: 200,
+       showCloseBtn: false,
+       mainClass: 'mfp-fade'
+
+    });
+
+    $(document).on('click', '.popup-modal-dismiss', function (e) {
+    		e.preventDefault();
+    		$.magnificPopup.close();
+    });
 
 
 /*----------------------------------------------------*/
@@ -183,9 +181,6 @@ $(document).on('click', '.popup-modal-dismiss', function (e) {
 /*----------------------------------------------------*/
 /* Close head banner
 ------------------------------------------------------*/
-var bannerClose = document.querySelector(".banner__close");
-if (bannerClose) {
-   bannerClose.addEventListener("click", function () {
-      this.closest(".head_banner").style.display = "none";
-   });
-}
+document.querySelector(".banner__close").addEventListener("click", function () {
+  this.closest(".head_banner").style.display = "none";
+});
