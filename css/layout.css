@@ -713,7 +713,7 @@ ul#nav li.current a { color: #fdb0c0; }
 	-moz-opacity: 0;
 	filter:alpha(opacity=0);
 
-   -webkit-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
 	-moz-transition: opacity 0.3s ease-in-out;
 	-o-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
@@ -757,30 +757,18 @@ ul#nav li.current a { color: #fdb0c0; }
    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
    opacity: 1;
+   pointer-events: none;
 }
 
 .project-badge.internship {
-  background-color: rgba(55, 65, 160, 0.8); /* muted indigo */
-}
-
-.project-badge.honors {
-  background-color: rgba(30, 115, 190, 0.8); /* calm academic blue */
-}
-
-
-
-.project-badge.internship {
-  background-color: rgba(55, 65, 160, 0.9); /* muted indigo */
+  background-color: rgba(55, 65, 160, 0.8);
   color: white;
 }
 
 .project-badge.honors {
-  background-color: rgba(30, 115, 190, 0.9); /* calm academic blue */
+  background-color: rgba(30, 115, 190, 0.8);
   color: white;
-
 }
-
-
 
 /* hide badge on hover */
 .portfolio-item:hover .project-badge {
