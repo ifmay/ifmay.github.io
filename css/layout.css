@@ -1168,9 +1168,8 @@ ul#nav li.current a { color: #fdb0c0; }
 #contact h1 span { display: none; }
 #contact h1:before {
    font-family: 'FontAwesome';
-   content: "\f0e0";
-	padding-right: 10px;
-	font-size: 72px;
+ 	 padding-right: 10px;
+	 font-size: 72px;
    line-height: 72px;
    text-align: left;
    float: left;
@@ -1272,6 +1271,33 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 #go-top a:hover { background-color: #Fdb0c0; }
 
+/* Resume section button styles */
+#resume .button,
+#resume a.button {
+  background-color: #2A5470;
+  color: #fff;
+  border: 2px solid #2A5470;
+  padding: 15px 30px;
+  font-size: 1.25em;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 160px;
+  text-align: center;
+  
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#resume .button:hover,
+#resume a.button:hover {
+  background-color: #fdb0c0;
+  border-color: #fdb0c0;
+  color: #fff;
+}
+
 /* ------------------------------------------------------------------ */
 /* j. Others
 /* ------------------------------------------------------------------ */
@@ -1352,3 +1378,841 @@ footer .social-links li:first-child { margin-left: 0; }
 .skill-bars li .percent90  { width: 90%; }
 .skill-bars li .percent95  { width: 95%; }
 .skill-bars li .percent100 { width: 100%; }
+
+/* ================================================================== */
+/* REFINED WEBSITE ANIMATIONS - Add to your layout.css
+/* Clean, professional, and mobile-friendly!
+/* ================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* GLOBAL KEYFRAME ANIMATIONS
+/* ------------------------------------------------------------------ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(42, 84, 112, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(42, 84, 112, 0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(253, 176, 192, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(253, 176, 192, 0.8), 0 0 30px rgba(253, 176, 192, 0.6);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* HEADER ANIMATIONS
+/* ------------------------------------------------------------------ */
+
+header .banner {
+  animation: fadeIn 1s ease-out;
+}
+
+header .banner-text h1 {
+  animation: fadeInDown 1s ease-out 0.3s backwards;
+}
+
+header .banner-text h3 {
+  animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+header .banner-text hr {
+  animation: scaleIn 0.8s ease-out 0.9s backwards;
+}
+
+header .social {
+  animation: fadeInUp 1s ease-out 1.2s backwards;
+}
+
+header .social li {
+  display: inline-block;
+  animation: bounce 0.6s ease-out backwards;
+  animation-delay: calc(1.4s + var(--social-index, 0) * 0.1s);
+}
+
+header .social li:nth-child(1) { --social-index: 0; }
+header .social li:nth-child(2) { --social-index: 1; }
+header .social li:nth-child(3) { --social-index: 2; }
+header .social li:nth-child(4) { --social-index: 3; }
+header .social li:nth-child(5) { --social-index: 4; }
+
+header .social li a {
+  transition: all 0.3s ease;
+}
+
+header .social li a:hover {
+  transform: translateY(-5px) scale(1.2);
+  text-shadow: 0 5px 15px rgba(253, 176, 192, 0.6);
+}
+
+header .scrolldown a {
+  animation: bounce 2s infinite;
+}
+
+/* ------------------------------------------------------------------ */
+/* NAVIGATION ANIMATIONS
+/* ------------------------------------------------------------------ */
+
+#nav-wrap {
+  animation: fadeInDown 0.8s ease-out;
+}
+
+ul#nav li {
+  transition: all 0.3s ease;
+}
+
+ul#nav li a {
+  position: relative;
+  overflow: hidden;
+}
+
+ul#nav li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #fdb0c0;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+ul#nav li a:hover::after,
+ul#nav li.current a::after {
+  width: 80%;
+}
+
+ul#nav li:hover {
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------------------ */
+/* SECTION HEADINGS ANIMATIONS
+/* ------------------------------------------------------------------ */
+
+.section-intro {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.section-intro h1 {
+  animation: fadeInDown 0.8s ease-out 0.2s backwards;
+  position: relative;
+  display: inline-block;
+}
+
+.section-intro h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #fdb0c0, transparent);
+  animation: expandWidth 1s ease-out 0.8s forwards;
+}
+
+.section-intro h5,
+.section-intro h6 {
+  animation: fadeIn 0.8s ease-out 0.4s backwards;
+}
+
+.section-intro p {
+  animation: fadeInUp 0.8s ease-out 0.6s backwards;
+}
+
+/* ------------------------------------------------------------------ */
+/* ABOUT SECTION ANIMATIONS
+/* ------------------------------------------------------------------ */
+
+.intro-info img {
+  animation: scaleIn 0.8s ease-out, float 3s ease-in-out infinite 1s;
+  transition: all 0.3s ease;
+}
+
+.intro-info img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(42, 84, 112, 0.3);
+}
+
+.about-content {
+  animation: fadeInUp 0.8s ease-out 0.3s backwards;
+}
+
+.about-content .info-list li {
+  animation: slideInLeft 0.6s ease-out backwards;
+  animation-delay: calc(0.5s + var(--info-index, 0) * 0.1s);
+  transition: all 0.3s ease;
+}
+
+.about-content .info-list li:nth-child(1) { --info-index: 0; }
+.about-content .info-list li:nth-child(2) { --info-index: 1; }
+.about-content .info-list li:nth-child(3) { --info-index: 2; }
+.about-content .info-list li:nth-child(4) { --info-index: 3; }
+.about-content .info-list li:nth-child(5) { --info-index: 4; }
+.about-content .info-list li:nth-child(6) { --info-index: 5; }
+
+.about-content .info-list li:hover {
+  transform: translateX(10px);
+  background: rgba(253, 176, 192, 0.1);
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+/* Skill bars animation */
+.skill-bars li {
+  animation: slideInRight 0.8s ease-out backwards;
+  animation-delay: calc(0.8s + var(--skill-index, 0) * 0.15s);
+}
+
+.skill-bars li:nth-child(1) { --skill-index: 0; }
+.skill-bars li:nth-child(2) { --skill-index: 1; }
+.skill-bars li:nth-child(3) { --skill-index: 2; }
+.skill-bars li:nth-child(4) { --skill-index: 3; }
+.skill-bars li:nth-child(5) { --skill-index: 4; }
+.skill-bars li:nth-child(6) { --skill-index: 5; }
+
+/* ------------------------------------------------------------------ */
+/* UNIVERSAL BUTTON STYLES - Consistent across entire site
+/* ------------------------------------------------------------------ */
+
+/* Remove any circles/outlines on click */
+.button,
+a.button,
+button,
+input[type="submit"],
+input[type="button"],
+.button-section .button {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #2A5470;
+  color: #fff;
+  border: 2px solid #2A5470;
+  padding: 15px 30px;
+  font-size: 1.25em;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 160px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Ripple effect on all buttons */
+.button::before,
+a.button::before,
+button::before,
+input[type="submit"]::before,
+input[type="button"]::before,
+.button-section .button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.button:hover::before,
+a.button:hover::before,
+button:hover::before,
+input[type="submit"]:hover::before,
+input[type="button"]:hover::before,
+.button-section .button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.button:hover,
+a.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.button-section .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(253, 176, 192, 0.4);
+  background-color: #fdb0c0;
+  border-color: #fdb0c0;
+}
+
+.button:active,
+a.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+.button-section .button:active {
+  transform: translateY(-1px);
+  outline: none !important;
+}
+
+.button:focus,
+a.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+.button-section .button:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(253, 176, 192, 0.3);
+}
+
+/* ------------------------------------------------------------------ */
+/* RESUME SECTION - Individual Experience Highlighting
+/* ------------------------------------------------------------------ */
+
+#resume .resume-header {
+  animation: fadeIn 0.8s ease-out;
+}
+
+#resume .timeline-block {
+  animation: fadeInUp 0.6s ease-out backwards;
+  animation-delay: calc(var(--item-index, 0) * 0.1s);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* Set individual delays for each timeline block */
+#resume .timeline-block:nth-child(1) { --item-index: 1; }
+#resume .timeline-block:nth-child(2) { --item-index: 2; }
+#resume .timeline-block:nth-child(3) { --item-index: 3; }
+#resume .timeline-block:nth-child(4) { --item-index: 4; }
+#resume .timeline-block:nth-child(5) { --item-index: 5; }
+#resume .timeline-block:nth-child(6) { --item-index: 6; }
+#resume .timeline-block:nth-child(7) { --item-index: 7; }
+#resume .timeline-block:nth-child(8) { --item-index: 8; }
+#resume .timeline-block:nth-child(9) { --item-index: 9; }
+#resume .timeline-block:nth-child(10) { --item-index: 10; }
+
+/* Individual experience hover - ONLY the hovered item highlights */
+#resume .timeline-block:hover {
+  transform: translateY(-5px);
+  background: rgba(253, 176, 192, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(253, 176, 192, 0.15);
+  margin: -10px 0;
+}
+
+#resume .timeline-ico {
+  animation: pulse 3s infinite, scaleIn 0.6s ease-out;
+  animation-delay: 0s, calc(var(--item-index, 0) * 0.1s);
+  transition: all 0.4s ease;
+}
+
+/* Icon ONLY changes when its parent timeline-block is hovered */
+#resume .timeline-block:hover .timeline-ico {
+  transform: scale(1.15);
+  background: #fdb0c0;
+  box-shadow: 0 5px 15px rgba(253, 176, 192, 0.4);
+}
+
+#resume .timeline-header {
+  animation: slideInLeft 0.6s ease-out backwards;
+  animation-delay: calc(var(--item-index, 0) * 0.1s + 0.2s);
+  transition: all 0.3s ease;
+}
+
+#resume .timeline-content {
+  animation: slideInRight 0.6s ease-out backwards;
+  animation-delay: calc(var(--item-index, 0) * 0.1s + 0.2s);
+  transition: all 0.3s ease;
+}
+
+#resume .timeline-content h4::after {
+  transition: all 0.3s ease;
+}
+
+/* Underline extends ONLY when parent is hovered */
+#resume .timeline-block:hover .timeline-content h4::after {
+  width: 100px;
+  background: #2A5470;
+  box-shadow: 0 2px 10px rgba(42, 84, 112, 0.3);
+}
+
+/* List items shift ONLY when parent is hovered */
+#resume .timeline-content ul li {
+  transition: all 0.2s ease;
+}
+
+#resume .timeline-block:hover .timeline-content ul li {
+  transform: translateX(5px);
+  color: #2A5470;
+}
+
+/* Individual list item hover within a hovered timeline block */
+#resume .timeline-block:hover .timeline-content ul li:hover {
+  transform: translateX(10px);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------ */
+/* PORTFOLIO SECTION ANIMATIONS
+/* ------------------------------------------------------------------ */
+
+#portfolio-wrapper .portfolio-item {
+  animation: scaleIn 0.6s ease-out backwards;
+  animation-delay: calc(var(--portfolio-index, 0) * 0.1s);
+}
+
+#portfolio-wrapper .portfolio-item:nth-child(1) { --portfolio-index: 0; }
+#portfolio-wrapper .portfolio-item:nth-child(2) { --portfolio-index: 1; }
+#portfolio-wrapper .portfolio-item:nth-child(3) { --portfolio-index: 2; }
+#portfolio-wrapper .portfolio-item:nth-child(4) { --portfolio-index: 3; }
+#portfolio-wrapper .portfolio-item:nth-child(5) { --portfolio-index: 4; }
+#portfolio-wrapper .portfolio-item:nth-child(6) { --portfolio-index: 5; }
+#portfolio-wrapper .portfolio-item:nth-child(7) { --portfolio-index: 6; }
+#portfolio-wrapper .portfolio-item:nth-child(8) { --portfolio-index: 7; }
+#portfolio-wrapper .portfolio-item:nth-child(9) { --portfolio-index: 8; }
+
+.portfolio-item .item-wrap {
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.portfolio-item .item-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(253, 176, 192, 0) 0%, rgba(42, 84, 112, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.portfolio-item:hover .item-wrap {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item:hover .item-wrap::before {
+  opacity: 1;
+}
+
+.portfolio-item .item-wrap img {
+  transition: all 0.4s ease;
+}
+
+.portfolio-item:hover .item-wrap img {
+  transform: scale(1.1);
+}
+
+.portfolio-item .link-icon {
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .link-icon {
+  transform: scale(1.3);
+}
+
+.project-badge {
+  animation: slideInRight 0.6s ease-out 0.3s backwards;
+}
+
+/* ------------------------------------------------------------------ */
+/* ACTIVITIES SECTION ANIMATIONS
+/* ------------------------------------------------------------------ */
+
+.activity {
+  animation: fadeInUp 0.8s ease-out backwards;
+  animation-delay: calc(var(--activity-index, 0) * 0.15s);
+  transition: all 0.3s ease;
+}
+
+.activity:nth-child(1) { --activity-index: 0; }
+.activity:nth-child(2) { --activity-index: 1; }
+.activity:nth-child(3) { --activity-index: 2; }
+.activity:nth-child(4) { --activity-index: 3; }
+.activity:nth-child(5) { --activity-index: 4; }
+
+.activity:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 3px solid #fdb0c0;
+}
+
+#activities h3 {
+  transition: all 0.3s ease;
+}
+
+#activities h3:hover {
+  color: #fff;
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(253, 176, 192, 0.6);
+}
+
+/* ------------------------------------------------------------------ */
+/* STATS SECTION - IMPRESSIVE COUNTER ANIMATIONS!
+/* ------------------------------------------------------------------ */
+
+#stats {
+  animation: fadeIn 1s ease-out;
+}
+
+#stats .stat {
+  animation: countUp 0.8s ease-out backwards;
+  animation-delay: calc(var(--stat-index, 0) * 0.2s);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#stats .stat:nth-child(1) { --stat-index: 0; }
+#stats .stat:nth-child(2) { --stat-index: 1; }
+#stats .stat:nth-child(3) { --stat-index: 2; }
+#stats .stat:nth-child(4) { --stat-index: 3; }
+
+#stats .stat:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+#stats .icon-part i {
+  animation: float 3s ease-in-out infinite;
+  animation-delay: calc(var(--stat-index, 0) * 0.3s);
+  transition: all 0.3s ease;
+}
+
+#stats .stat:hover .icon-part i {
+  transform: scale(1.3);
+  color: #fdb0c0;
+  text-shadow: 0 0 20px rgba(253, 176, 192, 0.8);
+}
+
+#stats .stat-count {
+  animation: countUp 1.5s ease-out backwards;
+  animation-delay: calc(var(--stat-index, 0) * 0.2s + 0.3s);
+  transition: all 0.3s ease;
+}
+
+#stats .stat:hover .stat-count {
+  transform: scale(1.2);
+  text-shadow: 0 5px 15px rgba(253, 176, 192, 0.5);
+}
+
+#stats .stat-title {
+  animation: fadeIn 0.8s ease-out backwards;
+  animation-delay: calc(var(--stat-index, 0) * 0.2s + 0.6s);
+  transition: all 0.3s ease;
+}
+
+#stats .stat:hover .stat-title {
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+}
+
+/* ------------------------------------------------------------------ */
+/* CONTACT SECTION - ANIMATED INFO CARDS
+/* ------------------------------------------------------------------ */
+
+#contact {
+  animation: fadeIn 1s ease-out;
+}
+
+.contact-info {
+  animation: fadeInUp 0.8s ease-out 0.3s backwards;
+}
+
+.contact-info .collapse {
+  animation: scaleIn 0.6s ease-out backwards;
+  animation-delay: calc(0.5s + var(--contact-index, 0) * 0.15s);
+  transition: all 0.3s ease;
+}
+
+.contact-info .collapse:nth-child(1) { --contact-index: 0; }
+.contact-info .collapse:nth-child(2) { --contact-index: 1; }
+.contact-info .collapse:nth-child(3) { --contact-index: 2; }
+
+.contact-info .icon i {
+  animation: pulse 3s infinite;
+  transition: all 0.3s ease;
+}
+
+.contact-info h5 {
+  transition: all 0.3s ease;
+}
+
+
+/* Contact links with underline effect */
+#contact a {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#contact a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fdb0c0;
+  transition: width 0.3s ease;
+}
+
+#contact a:hover::after {
+  width: 100%;
+}
+
+#contact a:hover {
+  transform: translateX(5px);
+  text-shadow: 0 0 10px rgba(253, 176, 192, 0.5);
+}
+
+/* ------------------------------------------------------------------ */
+/* FOOTER ANIMATIONS
+/* ------------------------------------------------------------------ */
+
+footer {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+footer .social-links li {
+  animation: bounce 0.6s ease-out backwards;
+  animation-delay: calc(var(--footer-social-index, 0) * 0.1s);
+  transition: all 0.3s ease;
+}
+
+footer .social-links li:nth-child(1) { --footer-social-index: 0; }
+footer .social-links li:nth-child(2) { --footer-social-index: 1; }
+footer .social-links li:nth-child(3) { --footer-social-index: 2; }
+footer .social-links li:nth-child(4) { --footer-social-index: 3; }
+
+footer .social-links li:hover {
+  transform: translateY(-10px) scale(1.3);
+}
+
+footer .social-links li a {
+  transition: all 0.3s ease;
+}
+
+footer .social-links li:hover a {
+  color: #fdb0c0;
+  text-shadow: 0 5px 20px rgba(253, 176, 192, 0.8);
+}
+
+#go-top a {
+  animation: bounce 2s infinite;
+  transition: all 0.3s ease;
+}
+
+#go-top a:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 30px rgba(253, 176, 192, 0.5);
+}
+
+/* ------------------------------------------------------------------ */
+/* MOBILE OPTIMIZATIONS - Simplified animations for better performance
+/* ------------------------------------------------------------------ */
+
+@media only screen and (max-width:768px) {
+  /* Reduce animation intensity on mobile */
+  .portfolio-item:hover .item-wrap {
+    transform: translateY(-5px) scale(1.01);
+  }
+  
+  #resume .timeline-block:hover {
+    transform: translateY(-3px);
+    padding: 10px;
+    margin: -5px 0;
+  }
+  
+  #stats .stat:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+  
+  .button:hover,
+  a.button:hover,
+  button:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Simplify floating animations on mobile */
+  .intro-info img,
+  #stats .icon-part i {
+    animation: none;
+  }
+  
+  /* Keep main entrance animations but remove hover effects on mobile */
+  header .social li a:hover,
+  ul#nav li:hover,
+  footer .social-links li:hover {
+    transform: none;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  /* Even more simplified for small screens */
+  #resume .timeline-block:hover {
+    transform: none;
+    background: rgba(253, 176, 192, 0.03);
+  }
+  
+  .portfolio-item:hover .item-wrap {
+    transform: none;
+  }
+  
+  /* Keep buttons functional but less dramatic */
+  .button:hover,
+  a.button:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* ACCESSIBILITY - Respect user preferences
+/* ------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  /* Remove all transform effects for reduced motion */
+  * {
+    transform: none !important;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* TOUCH DEVICE OPTIMIZATIONS
+/* ------------------------------------------------------------------ */
+
+@media (hover: none) and (pointer: coarse) {
+  /* On touch devices, simplify hover effects */
+  .timeline-block:hover,
+  .portfolio-item:hover,
+  .stat:hover {
+    transform: none;
+  }
+  
+  /* Make buttons more touch-friendly */
+  .button,
+  a.button {
+    padding: 18px 35px;
+    min-height: 48px; /* Better touch target */
+  }
+}
