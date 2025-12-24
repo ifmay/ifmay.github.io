@@ -100,27 +100,22 @@
 /*	Modal Popup
 ------------------------------------------------------*/
 
-    // Debug: Check if elements exist
-    console.log('Items found:', $('.item-wrap a').length);
-    
-    // Initialize Magnific Popup
-    $('.item-wrap a').magnificPopup({
-       type:'inline',
-       fixedContentPos: false,
-       removalDelay: 200,
-       showCloseBtn: false,
-       mainClass: 'mfp-fade',
-       callbacks: {
-          open: function() {
-             console.log('Popup opened!');
-          }
-       }
-    });
+$('.portfolio-item .item-wrap a').magnificPopup({
+   type: 'inline',
+   fixedContentPos: false,
+   fixedBgPos: true,
+   overflowY: 'auto',
+   closeBtnInside: true,
+   preloader: false,
+   midClick: true,
+   removalDelay: 300,
+   mainClass: 'mfp-fade'
+});
 
-    $(document).on('click', '.popup-modal-dismiss', function (e) {
-    		e.preventDefault();
-    		$.magnificPopup.close();
-    });
+$(document).on('click', '.popup-modal-dismiss', function (e) {
+   e.preventDefault();
+   $.magnificPopup.close();
+});
 
 
 /*----------------------------------------------------*/
