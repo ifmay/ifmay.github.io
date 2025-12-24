@@ -742,6 +742,52 @@ ul#nav li.current a { color: #fdb0c0; }
    margin-bottom: 0;
 }
 
+/* project badges */
+.project-badge {
+   position: absolute;
+   top: 10px;
+   right: 95px;
+   padding: 8px 16px;
+   font-size: 11px;
+   font-family: 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+   border-radius: 4px;
+   z-index: 10;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+   opacity: 1;
+}
+
+.project-badge.internship {
+  background-color: rgba(55, 65, 160, 0.8); /* muted indigo */
+}
+
+.project-badge.honors {
+  background-color: rgba(30, 115, 190, 0.8); /* calm academic blue */
+}
+
+
+
+.project-badge.internship {
+  background-color: rgba(55, 65, 160, 0.9); /* muted indigo */
+  color: white;
+}
+
+.project-badge.honors {
+  background-color: rgba(30, 115, 190, 0.9); /* calm academic blue */
+  color: white;
+
+}
+
+
+
+/* hide badge on hover */
+.portfolio-item:hover .project-badge {
+   opacity: 0;
+   transform: scale(0.9);
+}
+
 /* on hover */
 .portfolio-item:hover .overlay {
 	opacity: 1;
