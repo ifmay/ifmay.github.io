@@ -181,6 +181,9 @@
 /*----------------------------------------------------*/
 /* Close head banner
 ------------------------------------------------------*/
-document.querySelector(".banner__close").addEventListener("click", function () {
-  this.closest(".head_banner").style.display = "none";
-});
+var bannerClose = document.querySelector(".banner__close");
+if (bannerClose) {
+   bannerClose.addEventListener("click", function () {
+      this.closest(".head_banner").style.display = "none";
+   });
+}
