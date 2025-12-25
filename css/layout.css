@@ -665,6 +665,8 @@ ul#nav li.current a { color: #fdb0c0; }
    background: #fff;
    overflow: hidden;
    position: relative;
+   aspect-ratio: 1 / 1;
+   width: 100%;
 
    -webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -675,6 +677,8 @@ ul#nav li.current a { color: #fdb0c0; }
 .portfolio-item .item-wrap a {
    display: block;
    cursor: pointer;
+   width: 100%;
+   height: 100%;
 }
 
 /* overlay */
@@ -709,7 +713,7 @@ ul#nav li.current a { color: #fdb0c0; }
 	-moz-opacity: 0;
 	filter:alpha(opacity=0);
 
-   -webkit-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
 	-moz-transition: opacity 0.3s ease-in-out;
 	-o-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
@@ -722,6 +726,10 @@ ul#nav li.current a { color: #fdb0c0; }
 }
 .portfolio-item .item-wrap img {
    vertical-align: bottom;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
 }
 .portfolio-item .portfolio-item-meta { padding: 18px }
 .portfolio-item .portfolio-item-meta h5 {
@@ -732,6 +740,40 @@ ul#nav li.current a { color: #fdb0c0; }
    font: 12px/18px 'opensans-light', sans-serif;
    color: #c6c7c7;
    margin-bottom: 0;
+}
+
+/* project badges */
+.project-badge {
+   position: absolute;
+   top: 10px;
+   right: 95px;
+   padding: 8px 16px;
+   font-size: 11px;
+   font-family: 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+   border-radius: 4px;
+   z-index: 10;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+   opacity: 1;
+   pointer-events: none;
+}
+
+.project-badge.internship {
+  background-color: rgba(55, 65, 160, 0.8);
+  color: white;
+}
+
+.project-badge.honors {
+  background-color: rgba(30, 115, 190, 0.8);
+  color: white;
+}
+
+/* hide badge on hover */
+.portfolio-item:hover .project-badge {
+   opacity: 0;
+   transform: scale(0.9);
 }
 
 /* on hover */
@@ -1114,9 +1156,8 @@ ul#nav li.current a { color: #fdb0c0; }
 #contact h1 span { display: none; }
 #contact h1:before {
    font-family: 'FontAwesome';
-   content: "\f0e0";
-	padding-right: 10px;
-	font-size: 72px;
+ 	 padding-right: 10px;
+	 font-size: 72px;
    line-height: 72px;
    text-align: left;
    float: left;
@@ -1217,6 +1258,33 @@ footer .social-links li:first-child { margin-left: 0; }
  	border-radius: 100%;
 }
 #go-top a:hover { background-color: #Fdb0c0; }
+
+/* Resume section button styles */
+#resume .button,
+#resume a.button {
+  background-color: #2A5470;
+  color: #fff;
+  border: 2px solid #2A5470;
+  padding: 15px 30px;
+  font-size: 1.25em;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 160px;
+  text-align: center;
+  
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#resume .button:hover,
+#resume a.button:hover {
+  background-color: #fdb0c0;
+  border-color: #fdb0c0;
+  color: #fff;
+}
 
 /* ------------------------------------------------------------------ */
 /* j. Others
