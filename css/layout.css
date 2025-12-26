@@ -1862,6 +1862,54 @@ input[type="button"]:focus,
 }
 
 /* ------------------------------------------------------------------ */
+/* PORTFOLIO SECTION ANIMATIONS
+/* ------------------------------------------------------------------ */
+
+#portfolio-wrapper .portfolio-item {
+  animation: scaleIn 0.6s ease-out backwards;
+  animation-delay: calc(var(--portfolio-index, 0) * 0.1s);
+}
+
+#portfolio-wrapper .portfolio-item:nth-child(1) { --portfolio-index: 0; }
+#portfolio-wrapper .portfolio-item:nth-child(2) { --portfolio-index: 1; }
+#portfolio-wrapper .portfolio-item:nth-child(3) { --portfolio-index: 2; }
+#portfolio-wrapper .portfolio-item:nth-child(4) { --portfolio-index: 3; }
+#portfolio-wrapper .portfolio-item:nth-child(5) { --portfolio-index: 4; }
+#portfolio-wrapper .portfolio-item:nth-child(6) { --portfolio-index: 5; }
+#portfolio-wrapper .portfolio-item:nth-child(7) { --portfolio-index: 6; }
+#portfolio-wrapper .portfolio-item:nth-child(8) { --portfolio-index: 7; }
+#portfolio-wrapper .portfolio-item:nth-child(9) { --portfolio-index: 8; }
+
+.portfolio-item:hover .item-wrap {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item:hover .item-wrap::before {
+  opacity: 1;
+}
+
+.portfolio-item .item-wrap img {
+  transition: all 0.4s ease;
+}
+
+.portfolio-item:hover .item-wrap img {
+  transform: scale(1.1);
+}
+
+.portfolio-item .link-icon {
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .link-icon {
+  transform: scale(1.3);
+}
+
+.project-badge {
+  animation: slideInRight 0.6s ease-out 0.3s backwards;
+}
+
+/* ------------------------------------------------------------------ */
 /* ACTIVITIES SECTION ANIMATIONS
 /* ------------------------------------------------------------------ */
 
