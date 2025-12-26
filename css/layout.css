@@ -1649,13 +1649,6 @@ ul#nav li:hover {
 .about-content .info-list li:nth-child(5) { --info-index: 4; }
 .about-content .info-list li:nth-child(6) { --info-index: 5; }
 
-.about-content .info-list li:hover {
-  transform: translateX(10px);
-  background: rgba(253, 176, 192, 0.1);
-  padding-left: 10px;
-  border-radius: 5px;
-}
-
 /* Skill bars animation */
 .skill-bars li {
   animation: slideInRight 0.8s ease-out backwards;
