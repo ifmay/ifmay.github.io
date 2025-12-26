@@ -2157,3 +2157,53 @@ footer .social-links li:hover a {
     min-height: 48px; /* Better touch target */
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Mobile Header Fixes
+/* ------------------------------------------------------------------ */
+
+/* Tablets and smaller */
+@media only screen and (max-width: 768px) {
+  header .banner-text h1 {
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  
+  header .banner-text h3 {
+    font-size: 16px;
+    width: 85%;
+  }
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 480px) {
+  header .banner-text h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 auto 15px auto;
+  }
+  
+  header .banner-text h3 {
+    font-size: 14px;
+    line-height: 1.6em;
+    width: 90%;
+  }
+  
+  header .banner-text hr {
+    width: 80%;
+    margin: 15px auto 20px auto;
+  }
+}
+
+/* Very small screens */
+@media only screen and (max-width: 360px) {
+  header .banner-text h1 {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+  
+  header .banner-text h3 {
+    font-size: 13px;
+    width: 95%;
+  }
+}
